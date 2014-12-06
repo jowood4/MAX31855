@@ -69,7 +69,7 @@ void MAX31855::read_temp(void)
 		data[j] = spi_shift();
 		//Serial.println(data[j]);
 	}
-	delay(1000);  
+	//delay(1000);  
 	digitalWrite(_latch,1);
 
         thermocouple_temp = ((data[0]<<6) + (data[1]>>2))*0.25;
