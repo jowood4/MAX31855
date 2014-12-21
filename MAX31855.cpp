@@ -15,13 +15,15 @@ void MAX31855::setup(uint8_t latch)
 
 	digitalWrite(_latch,1);
 
-	SPI.begin();
+	//
 }
 
 uint8_t MAX31855::spi_shift(void)
 {
+	//SPI.begin();
 	uint8_t temp_data = 0;
 	temp_data = SPI.transfer(255);
+	//SPI.end();
 	return temp_data;
 }
 
